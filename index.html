@@ -7,9 +7,172 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
-<body class="bg-secondary display-flex justify-content-center p-1 align-items-center flex-column "> 
-    <div class="container col-md-6 border rounded bg-light text-center p-3 mt-5  d-flex justify-content-center align-items-center flex-column border-3 border-primary">
-        <h1 class="container col-10 p-2 m-2" id="demo"></h1>
+<style>
+    @font-face {
+    font-family: 'digital';
+    src: url('./font/DS-DIGIT.TTF');
+    font-weight: bolder;
+  
+}
+    *{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+        background:none;
+        /* border-width: 5px; */
+        background-color: black;
+    }
+    .col-md-6{
+        border: 5px solid rgb(11, 135, 11) ;
+    }
+    body{
+        margin: 0%;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background: none;
+        
+        /* background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/04/Backgrounds-space-wallpaper-HD.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;  */
+                  display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        font-family: 'digital';
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    @keyframes rt {
+  0% {
+    border-right-color: rgb(10, 158, 226);
+        border-left-color: rgb(15, 213, 18);
+        border-top-color: blue;
+        border-bottom-color: rgb(190, 6, 174);
+        border-bottom-width: 3px;
+  }
+  25% {
+    border-right-color:rgb(190, 6, 174);
+        border-left-color:  blue; 
+        border-top-color:rgb(10, 158, 226);
+        border-bottom-color: rgb(15, 213, 18);
+        border-right-width: 3px;
+    
+  }
+  50%{
+    border-right-color:rgb(15, 213, 18); 
+        border-left-color: rgb(10, 158, 226);
+        border-top-color:rgb(190, 6, 174);
+        border-bottom-color: blue; 
+        border-top-width: 2px;
+    
+    
+  }
+  75%{
+    border-right-color: blue; 
+        border-left-color:rgb(190, 6, 174);
+        border-top-color:rgb(15, 213, 18); 
+        border-bottom-color: rgb(10, 158, 226);
+        border-left-width: 3px;
+
+  }
+  100%{
+    border-right-color:rgb(10, 158, 226);
+        border-left-color:rgb(15, 213, 18);
+        border-top-color:  blue; 
+        border-bottom-color: rgb(190, 6, 174);
+        border-bottom-width: 4px;
+
+  }
+}
+    .col-md-6{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border-right-color: rgb(10, 158, 226);
+        border-left-color: rgb(15, 213, 18);
+        border-top-color: blue;
+        border-bottom-color: rgb(190, 6, 174);
+        border-inline-start: #0a9718ea;
+        border-inline-end: rgb(10, 158, 226);
+        border-bottom-width: 3px;
+        animation-name: rt ;
+        animation-duration: 4s ;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @media (max-width:795px) {
+        body{
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+            background-image: url('https://images.hdqwalls.com/wallpapers/outerspace-4k-kg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 15px;
+            
+        }
+        .col-md-6{
+        display: block;
+        background: none;
+        padding: 15px;
+        
+        }
+        
+    @keyframes rt {
+  0% {
+    border-right-color: rgb(218, 224, 227);
+        border-left-color: rgb(15, 213, 18);
+        border-top-color: blue;
+        border-bottom-color: rgb(86, 4, 88);
+        border-bottom-width: 3px;
+  }
+  25% {
+    border-right-color:rgb(135, 2, 138);
+        border-left-color:  blue; 
+        border-top-color:rgb(193, 216, 227);
+        border-bottom-color: rgb(15, 213, 18);
+        border-right-width: 3px;
+    
+  }
+  50%{
+    border-right-color:rgb(15, 213, 18); 
+        border-left-color: rgb(218, 224, 227);
+        border-top-color:rgb(115, 19, 116);
+        border-bottom-color: blue; 
+        border-top-width: 2px;
+    
+    
+  }
+  75%{
+    border-right-color: blue; 
+        border-left-color:rgb(151, 9, 153);
+        border-top-color:rgb(15, 213, 18); 
+        border-bottom-color: rgb(218, 224, 227);
+        border-left-width: 3px;
+
+  }
+  100%{
+    border-right-color:rgb(218, 224, 227);
+        border-left-color:rgb(15, 213, 18);
+        border-top-color:  blue; 
+        border-bottom-color: rgb(86, 4, 88);
+        border-bottom-width: 4px;
+
+  }
+}
+
+        
+    }
+    
+</style>
+<body class=" display-flex justify-content-center p-2 align-items-center flex-column "> 
+    <div class="container col-md-6   text-center text-center  d-flex justify-content-center align-items-center flex-column  ">
+        <h1 style="color: #0a9718ea;" class="container col-10 " id="demo"></h1>
     </div>
     <script src="./script.js"></script>
 </body>
